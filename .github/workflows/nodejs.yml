@@ -1,0 +1,41 @@
+name: Node.js CI
+
+on:
+  pull_request:
+  push:
+    branches:
+    - master
+    - dev
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm run pretest
+    - run: npm test
+      env:
+        CI: true
+  deploy:
+    needs: build
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/master')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.0.0 # This is the action
+        with:
+          heroku_api_key: 0e763cdf-e26a-46d5-b4c4-040da55537c1
+          heroku_app_name: qyl
+          heroku_email: linqianye@tutanota.com
