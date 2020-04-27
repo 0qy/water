@@ -1,8 +1,17 @@
 import React from 'react'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+
+import Home from './Home'
 
 const App = () => {
   return (
-    <h1>Dev</h1>
+    <div>
+      <Router>
+        <Switch>
+          <Route path='/' component={Home}/>
+        </Switch>
+      </Router>
+    </div>
   )
 }
 
