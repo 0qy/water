@@ -1,7 +1,7 @@
 import React from 'react'
 
-import WaterStart from './Start'
-import WaterMain from './Main'
+import WaterStart from './WaterStart'
+import WaterMain from './WaterMain'
 
 class Water extends React.Component {
   constructor (props) {
