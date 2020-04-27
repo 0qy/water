@@ -31,7 +31,11 @@ class WaterMain extends React.Component {
   render () {
     return (
       <div id="container">
-        <p>hello</p>
+        <div className="main">
+          <iframe frameBorder="0" height="100%" width="100%"
+            src="https://youtube.com/embed/nmccCzbznmk?autoplay=1&controls=0&showinfo=0&autohide=1">
+          </iframe>
+        </div>
       </div>
     )
   }
