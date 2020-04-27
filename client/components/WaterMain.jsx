@@ -2,12 +2,8 @@ import React from 'react'
 
 class WaterMain extends React.Component {
   componentDidMount () {
-    window.scrollTo({
-      top: 1000,
-      left: 4000,
-      behavior: 'smooth'
-    })
-    setTimeout(this.playAudioFromRandom, 10000)
+    // setTimeout(this.playAudioFromRandom, 10000)
+    // document.cookie = 'SameSite=none Secure'
   }
 
   playAudioFromRandom = () => {
@@ -17,24 +13,22 @@ class WaterMain extends React.Component {
     audioElement.play()
   }
 
-  horizontalScroll = (e) => {
-    e.preventDefault()
-    var container = document.getElementById('container')
-    var containerScrollPosition = document.getElementById('container').scrollLeft
-    container.scrollTo({
-      top: 0,
-      left: containerScrollPosition + e.deltaY,
-      behaviour: 'smooth'
-    })
-  }
-
   render () {
     return (
       <div id="container">
         <div className="main">
-          <iframe frameBorder="0" height="100%" width="100%"
-            src="https://youtube.com/embed/nmccCzbznmk?autoplay=1&controls=0&showinfo=0&autohide=1">
-          </iframe>
+          <div className="fullscreen">
+            {/* <iframe
+              src="https://player.vimeo.com/video/412164550?background=1&muted=0"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+              samesite="none"
+              secure="secure">
+            </iframe> */}
+          </div>
         </div>
       </div>
     )

@@ -280,29 +280,13 @@ var WaterMain = /*#__PURE__*/function (_React$Component) {
       audioElement.play();
     });
 
-    _defineProperty(_assertThisInitialized(_this), "horizontalScroll", function (e) {
-      e.preventDefault();
-      var container = document.getElementById('container');
-      var containerScrollPosition = document.getElementById('container').scrollLeft;
-      container.scrollTo({
-        top: 0,
-        left: containerScrollPosition + e.deltaY,
-        behaviour: 'smooth'
-      });
-    });
-
     return _this;
   }
 
   _createClass(WaterMain, [{
     key: "componentDidMount",
-    value: function componentDidMount() {
-      window.scrollTo({
-        top: 1000,
-        left: 4000,
-        behavior: 'smooth'
-      });
-      setTimeout(this.playAudioFromRandom, 10000);
+    value: function componentDidMount() {// setTimeout(this.playAudioFromRandom, 10000)
+      // document.cookie = 'SameSite=none Secure'
     }
   }, {
     key: "render",
@@ -311,11 +295,8 @@ var WaterMain = /*#__PURE__*/function (_React$Component) {
         id: "container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "main"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-        frameBorder: "0",
-        height: "100%",
-        width: "100%",
-        src: "https://youtube.com/embed/nmccCzbznmk?autoplay=1&controls=0&showinfo=0&autohide=1"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fullscreen"
       })));
     }
   }]);
