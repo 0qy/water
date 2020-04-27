@@ -36,6 +36,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.0.0 # This is the action
         with:
-          heroku_api_key: 0e763cdf-e26a-46d5-b4c4-040da55537c1
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: qyl
           heroku_email: linqianye@tutanota.com
