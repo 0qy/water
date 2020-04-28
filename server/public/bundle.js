@@ -298,6 +298,7 @@ var WaterMain = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "fullscreen"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        id: "iframe",
         src: "https://player.vimeo.com/video/412164550?autoplay=1&loop=1&background=1&muted=0",
         frameBorder: "0",
         allow: "autoplay; fullscreen",

@@ -3,6 +3,7 @@ body {
   width: 97vh;
   background-color: black;
   font-size: 22px;
+  cursor: url('images/bubbleSmall.png'), pointer;
 }
 
 div{
@@ -10,13 +11,11 @@ div{
   height: 100%
 }
 
-div#app {
-  width: 100%;
-  height: 100%;
+#app {
   position: absolute;
 }
 
-div.start{
+.start{
   color: white;
   position: absolute;
   font-family: "Manrope", sans-serif;
@@ -36,12 +35,7 @@ div.start{
   background-color: darkslateblue;
 }
 
-div#container{
-  cursor: url('images/bubbleSmall.png'), pointer;
-  overflow: hidden;
-}
-
-div.main{
+.main{
   z-index: -10;
 }
 
