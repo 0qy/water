@@ -14,7 +14,7 @@
     "server": "run-s build start",
     "start": "node server",
     "pretest": "eslint .",
-    "test": "jest --verbose --noStackTrace",
+    "test": "eslint .",
     "test:watch": "npm test -- --watchAll",
     "dev": "run-p dev:client dev:server",
     "dev:server": "nodemon server",
