@@ -285,8 +285,9 @@ var WaterMain = /*#__PURE__*/function (_React$Component) {
 
   _createClass(WaterMain, [{
     key: "componentDidMount",
-    value: function componentDidMount() {// setTimeout(this.playAudioFromRandom, 10000)
-      // document.cookie = 'SameSite=none Secure'
+    value: function componentDidMount() {
+      // setTimeout(this.playAudioFromRandom, 10000)
+      document.cookie = 'SameSite=none Secure';
     }
   }, {
     key: "render",
@@ -297,7 +298,14 @@ var WaterMain = /*#__PURE__*/function (_React$Component) {
         className: "main"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "fullscreen"
-      })));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        src: "https://player.vimeo.com/video/412164550?background=1&muted=0&loop=1",
+        frameBorder: "0",
+        allow: "autoplay; fullscreen",
+        allowFullScreen: true
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        src: "https://player.vimeo.com/api/player.js"
+      }))));
     }
   }]);
 
