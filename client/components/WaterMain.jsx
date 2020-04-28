@@ -1,10 +1,8 @@
 import React from 'react'
-import Vimeo from '@u-wave/react-vimeo'
 
 class WaterMain extends React.Component {
   componentDidMount () {
-    // setTimeout(this.playAudioFromRandom, 10000)
-    document.cookie = 'SameSite=none Secure'
+    setTimeout(this.playAudioFromRandom, 10000)
   }
 
   playAudioFromRandom = () => {
@@ -19,13 +17,13 @@ class WaterMain extends React.Component {
       <div id="container">
         <div className="main">
           <div className="fullscreen">
-            <Vimeo
-              video="412164550"
-              autoplay
-              background
-              loop
-              width="100%"
-              height="100%"/>
+            <iframe src="https://player.vimeo.com/video/412164550?autoplay=1&loop=1&background=1&muted=0"
+              frameBorder="0"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+              title="The Return Of Water"
+              data-ready="true"></iframe>
+            <audio id="audio" loop src="monologue.mp3"/>
           </div>
         </div>
       </div>
