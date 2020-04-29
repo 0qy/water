@@ -265,16 +265,12 @@ var WaterMain = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(WaterMain);
 
-  function WaterMain() {
+  function WaterMain(props) {
     var _this;
 
     _classCallCheck(this, WaterMain);
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _super.call.apply(_super, [this].concat(args));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "playAudioFromRandom", function () {
       var audioElement = document.getElementById('audio');
@@ -291,6 +287,9 @@ var WaterMain = /*#__PURE__*/function (_React$Component) {
       console.log('clicked');
     });
 
+    _this.state = {
+      playing: false
+    };
     return _this;
   }
 
@@ -311,7 +310,7 @@ var WaterMain = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_player__WEBPACK_IMPORTED_MODULE_1___default.a, {
         id: "player",
         url: "https://vimeo.com/412164550",
-        playing: true
+        playing: this.state.playing
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
         id: "audio",
         loop: true,

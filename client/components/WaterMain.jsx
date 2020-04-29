@@ -2,6 +2,13 @@ import React from 'react'
 import ReactPlayer from 'react-player'
 
 class WaterMain extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      playing: false
+    }
+  }
+
   componentDidMount () {
     setTimeout(this.playAudioFromRandom, 10000)
   }
@@ -26,7 +33,7 @@ class WaterMain extends React.Component {
       <div id="container">
         <div className="main">
           <div className="fullscreen">
-            <ReactPlayer id="player" url='https://vimeo.com/412164550' playing/>
+            <ReactPlayer id="player" url='https://vimeo.com/412164550' playing={this.state.playing}/>
             {/* <iframe id="iframe" src="https://player.vimeo.com/video/412164550?autoplay=1&loop=1&background=1&muted=0"
               frameBorder="0"
               allow="autoplay; fullscreen"
