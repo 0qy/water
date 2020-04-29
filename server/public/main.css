@@ -71,18 +71,15 @@ div{
 }
 
 @media only screen
-and (max-width: 420) {
-  body {
-    font-size: 30px;
-  }
-}
-
-@media only screen
 and (min-width: 420px)
 and (max-width: 700px)
 and (min-resolution: 120dpi) {
   body{
     font-size: 18px;
+  }
+  iframe {
+    width: 432px;
+    height: 243px;
   }
 }
 
@@ -90,7 +87,11 @@ and (min-resolution: 120dpi) {
 and (min-width: 700px)
 and (max-width: 1200px)
 and (min-resolution: 120dpi){
-  body{
+  body {
     font-size: 28px;
+  }
+  iframe {
+    width: 704px;
+    height: 396px;
   }
 }
