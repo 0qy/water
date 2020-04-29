@@ -7,6 +7,7 @@ class WaterMain extends React.Component {
     this.state = {
       playing: false
     }
+    this.clickHandler = this.clickHandler.bind(this)
   }
 
   componentDidMount () {
@@ -26,12 +27,16 @@ class WaterMain extends React.Component {
 
   clickHandler = () => {
     console.log('clicked')
+    this.setState({
+      playing: true
+    })
   }
 
   render () {
     return (
       <div id="container">
         <div className="main">
+          <button onClick={this.clickHandler}>here</button>
           <div className="fullscreen">
             <ReactPlayer id="player" url='https://vimeo.com/412164550' playing={this.state.playing}/>
             {/* <iframe id="iframe" src="https://player.vimeo.com/video/412164550?autoplay=1&loop=1&background=1&muted=0"

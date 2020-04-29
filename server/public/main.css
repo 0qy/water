@@ -28,6 +28,15 @@ div{
   text-align: center;
 }
 
+button {
+  font-size: 1em;
+  z-index: 100;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 .start button{
   font-size: 1em;
 }
