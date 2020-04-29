@@ -24,6 +24,7 @@ div{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .start button{
@@ -33,6 +34,11 @@ div{
 .start button:hover{
   font-size: 50px;
   background-color: darkslateblue;
+}
+
+.smallText {
+  font-size: 0.7em;
+  text-align: center;
 }
 
 .main{
@@ -85,6 +91,6 @@ and (min-width: 700px)
 and (max-width: 1200px)
 and (min-resolution: 120dpi){
   body{
-    font-size: 50px;
+    font-size: 28px;
   }
 }
