@@ -12,6 +12,10 @@ class WaterMain extends React.Component {
     audioElement.play()
   }
 
+  errorHandler = () => {
+    alert('video or voice failed to load, please refresh page.')
+  }
+
   render () {
     return (
       <div id="container">
@@ -22,8 +26,9 @@ class WaterMain extends React.Component {
               allow="autoplay; fullscreen"
               allowFullScreen
               title="The Return Of Water"
-              data-ready="true"></iframe>
-            <audio id="audio" loop src="monologue.mp3"/>
+              data-ready="true"
+              onError={this.errorHandler}></iframe>
+            <audio id="audio" loop src="monologue.mp3" onError={this.errorHandler}/>
           </div>
         </div>
       </div>

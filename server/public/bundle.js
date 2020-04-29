@@ -280,6 +280,10 @@ var WaterMain = /*#__PURE__*/function (_React$Component) {
       audioElement.play();
     });
 
+    _defineProperty(_assertThisInitialized(_this), "errorHandler", function () {
+      alert('video or voice failed to load, please refresh page.');
+    });
+
     return _this;
   }
 
@@ -304,11 +308,13 @@ var WaterMain = /*#__PURE__*/function (_React$Component) {
         allow: "autoplay; fullscreen",
         allowFullScreen: true,
         title: "The Return Of Water",
-        "data-ready": "true"
+        "data-ready": "true",
+        onError: this.errorHandler
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
         id: "audio",
         loop: true,
-        src: "monologue.mp3"
+        src: "monologue.mp3",
+        onError: this.errorHandler
       }))));
     }
   }]);
@@ -336,7 +342,7 @@ __webpack_require__.r(__webpack_exports__);
 var WaterStart = function WaterStart(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "start"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This site will be playing audio."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This site contains flashing images and autoplay audios."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: props.clickHandler
   }, "Enter"));
 };
