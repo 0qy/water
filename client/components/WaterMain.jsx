@@ -1,15 +1,10 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
+import { connect } from 'react-redux'
+
+import { playAction } from '../actions/playAction'
 
 class WaterMain extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      playing: false
-    }
-    this.clickHandler = this.clickHandler.bind(this)
-  }
-
   componentDidMount () {
     setTimeout(this.playAudioFromRandom, 10000)
   }
@@ -26,26 +21,19 @@ class WaterMain extends React.Component {
   }
 
   clickHandler = () => {
-    console.log('clicked')
-    this.setState({
-      playing: true
-    })
+    this.props.dispatch(playAction())
   }
 
   render () {
     return (
       <div id="container">
         <div className="main">
-          <button onClick={this.clickHandler}>here</button>
+          {this.props.playing
+            ? <></>
+            : <button onClick={this.clickHandler}>Go</button>
+          }
           <div className="fullscreen">
-            <ReactPlayer id="player" url='https://vimeo.com/412164550' playing={this.state.playing}/>
-            {/* <iframe id="iframe" src="https://player.vimeo.com/video/412164550?autoplay=1&loop=1&background=1&muted=0"
-              frameBorder="0"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-              title="The Return Of Water"
-              data-ready="true"
-              onError={this.errorHandler}></iframe> */}
+            <ReactPlayer id="player" url='https://vimeo.com/412164550' playing={this.props.playing}/>
             <audio id="audio" loop src="monologue.mp3" onError={this.errorHandler}/>
           </div>
         </div>
@@ -54,4 +42,10 @@ class WaterMain extends React.Component {
   }
 }
 
-export default WaterMain
+const mapStateToProps = state => {
+  return {
+    playing: state
+  }
+}
+
+export default connect(mapStateToProps)(WaterMain)

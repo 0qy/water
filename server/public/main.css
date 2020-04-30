@@ -28,21 +28,31 @@ div{
   text-align: center;
 }
 
-button {
+button{
   font-size: 1em;
-  z-index: 100;
 }
 
 button:hover {
   cursor: pointer;
+  font-size: 5em;
+  background-color: darkslateblue;
 }
 
-.start button{
+.main button {
   font-size: 1em;
+  z-index: 100;
+  bottom: 20px;
+  position: absolute;
+  height: 1.5em;
+  width: 3em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.start button:hover{
-  font-size: 50px;
+.main button:hover {
+  cursor: pointer;
+  font-size: 5em;
   background-color: darkslateblue;
 }
 
@@ -53,6 +63,7 @@ button:hover {
 
 .main{
   z-index: -10;
+  text-align: center;
 }
 
 .fullscreen{
@@ -110,7 +121,7 @@ and (min-width: 700px)
 and (max-width: 1200px)
 and (min-resolution: 120dpi){
   body {
-    font-size: 28px;
+    font-size: 35px;
   }
   iframe {
     width: 704px;
