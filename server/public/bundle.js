@@ -337,7 +337,10 @@ var WaterMain = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_player__WEBPACK_IMPORTED_MODULE_1___default.a, {
         id: "player",
         url: "https://vimeo.com/412164550",
-        playing: this.props.playing
+        playing: this.props.playing,
+        loop: true,
+        width: "100%",
+        height: "100%"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
         id: "audio",
         loop: true,

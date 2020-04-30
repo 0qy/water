@@ -110,10 +110,12 @@ and (max-width: 700px)
 and (min-resolution: 120dpi) {
   body{
     font-size: 18px;
+    width: 96vw;
+    height: 96vw;
   }
   iframe {
-    width: 432px;
-    height: 243px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -123,9 +125,27 @@ and (max-width: 1200px)
 and (min-resolution: 120dpi){
   body {
     font-size: 35px;
+    width: 96vw;
+    height: 96vw;
   }
   iframe {
     width: 704px;
     height: 396px;
+  }
+}
+
+@media only screen
+and (orientation: portrait) {
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen
+and (orientation: landscape) {
+  iframe {
+    height: 100%;
+    width: auto;
   }
 }

@@ -33,7 +33,11 @@ class WaterMain extends React.Component {
             : <button onClick={this.clickHandler}>Go</button>
           }
           <div className="fullscreen">
-            <ReactPlayer id="player" url='https://vimeo.com/412164550' playing={this.props.playing}/>
+            <ReactPlayer id="player" url='https://vimeo.com/412164550' 
+              playing={this.props.playing} 
+              loop
+              width="100%"
+              height="100%"/>
             <audio id="audio" loop src="monologue.mp3" onError={this.errorHandler}/>
           </div>
         </div>
