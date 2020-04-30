@@ -6,7 +6,7 @@ import { playAction } from '../actions/playAction'
 
 class WaterMain extends React.Component {
   componentDidMount () {
-    setTimeout(this.playAudioFromRandom, 10000)
+    setTimeout(this.playAudioFromRandom, 5000)
   }
 
   playAudioFromRandom = () => {
@@ -33,8 +33,8 @@ class WaterMain extends React.Component {
             : <button onClick={this.clickHandler}>Go</button>
           }
           <div className="fullscreen">
-            <ReactPlayer id="player" url='https://vimeo.com/412164550' 
-              playing={this.props.playing} 
+            <ReactPlayer id="player" url='https://vimeo.com/412164550'
+              playing={this.props.playing}
               loop
               width="100%"
               height="100%"/>

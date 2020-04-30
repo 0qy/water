@@ -321,7 +321,7 @@ var WaterMain = /*#__PURE__*/function (_React$Component) {
   _createClass(WaterMain, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      setTimeout(this.playAudioFromRandom, 10000);
+      setTimeout(this.playAudioFromRandom, 5000);
     }
   }, {
     key: "render",
@@ -381,7 +381,9 @@ var WaterStart = function WaterStart(props) {
     className: "start"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "this site contains flashing images and autoplay audio"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "smallText"
-  }, "media might take a few seconds to load"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "media might take a few seconds to load"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "smallText"
+  }, "mobile users please view this in a browser"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: props.clickHandler
   }, "Enter"));
 };
