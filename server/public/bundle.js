@@ -370,7 +370,7 @@ var WaterMain = /*#__PURE__*/function (_React$Component) {
         loop: true,
         width: "100%",
         height: "100%",
-        playsinline: "1"
+        playsinline: true
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("audio", {
         id: "audio",
         loop: true,

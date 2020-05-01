@@ -40,7 +40,7 @@ class WaterMain extends React.Component {
               loop
               width="100%"
               height="100%"
-              playsinline="true"/>
+              playsinline/>
             <audio id="audio" loop src="monologue.mp3" onError={this.errorHandler}/>
           </div>
           {this.props.playing
