@@ -34,7 +34,6 @@ class WaterMain extends React.Component {
     return (
       <div id="container">
         <div className="main">
-          
           <div className="fullscreen">
             <ReactPlayer id="player" url='https://vimeo.com/412164550'
               playing={this.props.playing}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
 import Home from './Home'
 import Water from './Water'
@@ -10,7 +10,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route path='/water' component={Water}/>
-          <Route path='/' component={Home}/>
+          <Redirect path="/" to="/water"/>
         </Switch>
       </Router>
     </div>
