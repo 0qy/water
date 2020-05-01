@@ -2,7 +2,8 @@ import React from 'react'
 import ReactPlayer from 'react-player'
 import { connect } from 'react-redux'
 
-import { playAction } from '../actions/playAction'
+import { playAction, leaveAction } from '../actions/playAction'
+import { displayStart } from '../actions/startDisplayActions'
 
 class WaterMain extends React.Component {
   componentDidMount () {
@@ -24,14 +25,16 @@ class WaterMain extends React.Component {
     this.props.dispatch(playAction())
   }
 
+  leaveClickHandler = () => {
+    this.props.dispatch(leaveAction())
+    this.props.dispatch(displayStart())
+  }
+
   render () {
     return (
       <div id="container">
         <div className="main">
-          {this.props.playing
-            ? <></>
-            : <button onClick={this.clickHandler}>Go</button>
-          }
+          
           <div className="fullscreen">
             <ReactPlayer id="player" url='https://vimeo.com/412164550'
               playing={this.props.playing}
@@ -40,6 +43,10 @@ class WaterMain extends React.Component {
               height="100%"/>
             <audio id="audio" loop src="monologue.mp3" onError={this.errorHandler}/>
           </div>
+          {this.props.playing
+            ? <button className="smallButton" onClick={this.leaveClickHandler}>leave</button>
+            : <button id="go" onClick={this.clickHandler}>Go</button>
+          }
         </div>
       </div>
     )
@@ -48,7 +55,7 @@ class WaterMain extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    playing: state
+    playing: state.play
   }
 }
 

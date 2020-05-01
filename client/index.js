@@ -4,10 +4,10 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import App from './components/App'
-import reducer from './reducers/reducer'
+import reducers from './reducers'
 
 const store = createStore(
-  reducer,
+  reducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(

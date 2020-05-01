@@ -1,33 +1,31 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import WaterStart from './WaterStart'
 import WaterMain from './WaterMain'
+import { hideStart } from '../actions/startDisplayActions'
 
 class Water extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      mainVisible: false
-    }
-    this.clickHandler = this.clickHandler.bind(this)
-  }
-
-  clickHandler () {
-    this.setState({
-      mainVisible: true
-    })
+  clickHandler = () => {
+    this.props.dispatch(hideStart())
   }
 
   render () {
     return (
       <div>
-        {this.state.mainVisible
-          ? <WaterMain />
-          : <WaterStart clickHandler={this.clickHandler}/>
+        {this.props.startDisplay
+          ? <WaterStart clickHandler={this.clickHandler}/>
+          : <WaterMain />
         }
       </div>
     )
   }
 }
 
-export default Water
+const mapStateToProps = state => {
+  return {
+    startDisplay: state.startDisplay
+  }
+}
+
+export default connect(mapStateToProps)(Water)
