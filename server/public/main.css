@@ -3,9 +3,13 @@
   src: url('fonts/Manrope/Manrope-VariableFont_wght.ttf') format('truetype');
 }
 
+@viewport {
+  width: 100vw;
+}
+
 body {
   height: 97vh;
-  width: 97vh;
+  width: 100vh;
   background-color: black;
   font-size: 22px;
   cursor: url('images/bubbleSmall.png'), pointer;

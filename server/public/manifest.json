@@ -1,0 +1,21 @@
+{
+  "name": "回水洞肉 The reaturn of water: holes and flesh",
+  "short_name": "回水洞肉",
+  "start_url": "https:q-y-l.com/#/water",
+  "background_color": "black",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "darkslateblue",
+  "icons": [
+    {
+      "src": "/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
