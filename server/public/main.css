@@ -94,18 +94,3 @@ button.smallButton:hover {
     display: flex;
     justify-content: center;
 }
-
-/* 
-#app {
-  position: absolute;
-}
-
-.fullscreen iframe{
-  border: 0;
-  left: 0;
-  top: 0;
-  width: 97%;
-  height: 97%
-}
-
-} */
